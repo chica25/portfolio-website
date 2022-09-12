@@ -1,7 +1,7 @@
 
 function Projects() {
     return(
-        <h1>Test 2</h1>
+        <h1>Projects</h1>
     )
 }
 
