@@ -1,11 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './components/Home.js';
+import Projects from './components/Projects';
+import About from './components/About';
+import Contact from './components/Contact';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 
 function App() {
   return (
     <div className="App">
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/projects" element={<Projects />}/>
+        <Route path="/about" element={<About />}/>
+        <Route path="contact/" element={<Contact />}/>
+      </Routes>
+    </Router>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
